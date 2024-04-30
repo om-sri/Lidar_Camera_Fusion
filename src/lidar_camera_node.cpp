@@ -186,7 +186,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
   arma::vec X = arma::regspace(1, Z.n_cols);  // X = horizontal spacing
   arma::vec Y = arma::regspace(1, Z.n_rows);  // Y = vertical spacing 
 
-  
+  //X and Y provide information about the dimensions of the range image
 
   arma::vec XI = arma:: regspace(X.min(), 1.0, X.max()); // magnify by approx 2
   arma::vec YI = arma::regspace(Y.min(), 1.0/interpol_value, Y.max()); // 
