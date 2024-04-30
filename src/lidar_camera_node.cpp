@@ -188,7 +188,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 
   //X and Y provide information about the dimensions of the range image
 
-  arma::vec XI = arma::regspace(X.min(), 1.0, X.max()); // magnify by approx 2
+  arma::vec XI = arma:: regspace(X.min(), 1.0, X.max()); // magnify by approx 2
   arma::vec YI = arma::regspace(Y.min(), 1.0/interpol_value, Y.max()); // magnify by 1/interpol_value
 
 
@@ -198,6 +198,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 
   arma::interp2(X, Y, Z, XI, YI, ZI,"lineal");  
   arma::interp2(X, Y, Zz, XI, YI, ZzI,"lineal");  
+
+//interpolate the range and depth data from the original grid (defined by X and Y) to a denser grid (defined by XI and YI) and store in ZI and ZzI
 
   // reconstruccion of image to 3D  
 
