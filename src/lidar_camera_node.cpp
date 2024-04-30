@@ -131,7 +131,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 
 
   //point cloud to image 
-
+  // creating a range image from the filtered point cloud data (cloud_out)
   Eigen::Affine3f sensorPose = (Eigen::Affine3f)Eigen::Translation3f(0.0f, 0.0f, 0.0f);
   rangeImage->pcl::RangeImage::createFromPointCloud(*cloud_out, pcl::deg2rad(angular_resolution_x), pcl::deg2rad(angular_resolution_y),
                                        pcl::deg2rad(max_angle_width), pcl::deg2rad(max_angle_height),
