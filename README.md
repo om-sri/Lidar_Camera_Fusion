@@ -2,7 +2,7 @@
 The code implemented in ROS projects a point cloud obtained by a 3D-Lidar sensor on an image from an RGB camera. The example used the ROS package to calibrate a camera and a LiDAR from [lidar_camera_calibration](https://github.com/ankitdhall/lidar_camera_calibration). 
 
 ## Interpolated point cloud 
-The white dots are the original point cloud of the Velodyne VLP-16 lidar. The colored dots are the interpolated point cloud.
+The white dots are the original point cloud of the lidar. The colored dots are the interpolated point cloud.
 <p align='center'>
 <img width="100%" src="/images/rviz.png"/>
 </p>
