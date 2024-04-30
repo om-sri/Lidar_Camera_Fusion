@@ -99,7 +99,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
           return;
         }
 
-  //Conversion from sensor_msgs::PointCloud2 to pcl::PointCloud<T>
+  //converting the incoming point cloud message (in_pc2) into a PointCloud object (pcl_pc2) usable by the Point Cloud Library (PCL)
   pcl::PCLPointCloud2 pcl_pc2;
   pcl_conversions::toPCL(*in_pc2,pcl_pc2);
   PointCloud::Ptr msg_pointCloud(new PointCloud);
@@ -117,6 +117,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 
   std::vector<int> indices;
   pcl::removeNaNFromPointCloud(*msg_pointCloud, *cloud_in, indices);
+  // 'cloud_in' will contain only the valid points from the original point cloud data, and 'indices' will contain the indices of these valid points.
   
   for (int i = 0; i < (int) cloud_in->points.size(); i++)
   {
@@ -126,6 +127,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
       cloud_out->push_back(cloud_in->points[i]);     
     
   }  
+  //'cloud_out' point cloud will contain only the points from the cloud_in point cloud that fall within the specified range (minlen to maxlen)
 
 
   //point cloud to image 
