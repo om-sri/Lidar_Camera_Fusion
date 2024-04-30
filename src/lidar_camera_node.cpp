@@ -179,6 +179,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
        
       }
 
+    // range represents the distance from the sensor to the point, and z represents the depth of the point along the sensor's line of sight
+
   //interpolation
   
   arma::vec X = arma::regspace(1, Z.n_cols);  // X = horizontal spacing
