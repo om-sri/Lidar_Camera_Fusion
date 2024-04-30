@@ -260,7 +260,6 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 
   //filtering step to remove points with high variance from the interpolated range image based on a statistical analysis within blocks of rows and columns
 
-  //projects lidar points onto the camera image 
   int num_pc = 0; 
   for (uint i=0; i< ZI.n_rows - interpol_value; i+=1)
    {       
@@ -354,6 +353,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr pc_color (new pcl::PointCloud<pcl::PointXYZRGB>);
 
    //P_out = cloud_out;
+
+   //projects lidar points onto the camera image 
 
   for (int i = 0; i < size_inter_Lidar; i++)
   {
