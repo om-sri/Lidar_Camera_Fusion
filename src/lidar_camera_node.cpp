@@ -228,6 +228,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
         }
       }      
     }
+
+    //adjusting the interpolated range image by setting nearby pixels to zero if the current pixel has an invalid or missing value
   
   if (f_pc){    
     
