@@ -85,6 +85,7 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 //in_pc2 is pointer to lidardata, in_image is pointer for camera data
 {
     cv_bridge::CvImagePtr cv_ptr , color_pcl;
+    //two smart pointers cv_ptr and color_pcl,used to manage OpenCV image data received from camera messages
         try
         {
           cv_ptr = cv_bridge::toCvCopy(in_image, sensor_msgs::image_encodings::BGR8);
