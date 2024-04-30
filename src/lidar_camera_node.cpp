@@ -299,6 +299,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
           point_cloud->points[num_pc].y = result(1);
           point_cloud->points[num_pc].z = result(2);
 
+         //Each element in the points array represents a 3D point in the point cloud
+
           cloud->push_back(point_cloud->points[num_pc]); 
 
           num_pc++;
