@@ -290,6 +290,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
           result << pc_x,
                     pc_y,
                     ZzI(i,j);
+
+         //pc_x, pc_y, and ZzI(i, j) represent the Cartesian coordinates of the point in the lidar's local coordinate system
           
           result = Lidar_matrix*result;  // rotacion en eje X para correccion
 
