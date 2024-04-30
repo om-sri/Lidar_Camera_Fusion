@@ -49,7 +49,7 @@ The white dots are the original point cloud of the lidar. The colored dots are t
 
 ## Ros Launch
 
-You can use this [rosbag](https://drive.google.com/file/d/1kq9jk_hmU2sOuMyih4WXSnvdyIEpkkoa/view?usp=sharing) to test the repository.  Please note that the homogeneous camera-LiDAR matrix has inaccuracies. We are recalibrating the camera and LiDAR to reduce this error. However, you can get an idea of how the package works and how it merges the Realsense D435 camera and the Velodyne VLP16 LiDAR. 
+You can use this [rosbag](https://drive.google.com/file/d/1kq9jk_hmU2sOuMyih4WXSnvdyIEpkkoa/view?usp=sharing) to test the repository.  Please note that the homogeneous camera-LiDAR matrix has inaccuracies. We are recalibrating the camera and LiDAR to reduce this error.
 
 #### Rosbag play 
 
