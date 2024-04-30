@@ -86,6 +86,8 @@ void callback(const boost::shared_ptr<const sensor_msgs::PointCloud2>& in_pc2 , 
 {
     cv_bridge::CvImagePtr cv_ptr , color_pcl;
     //two smart pointers cv_ptr and color_pcl,used to manage OpenCV image data received from camera messages
+    
+        //Convert images in in_image to OPENCV format and stores in two variables
         try
         {
           cv_ptr = cv_bridge::toCvCopy(in_image, sensor_msgs::image_encodings::BGR8);
